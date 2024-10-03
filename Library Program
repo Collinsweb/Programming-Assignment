@@ -1,0 +1,39 @@
+//Library Program
+/*
+Author:Maina Collins
+RegNo:CT101/G/21678/24
+*/
+#include <stdio.h>
+int main() {
+    int BookID,DueDate,ReturnDate,DaysOverdue;
+    float FineRate, FineAmount;
+
+    printf("Enter the Book ID: ");
+    scanf("%d", &BookID);
+    printf("Enter the Due Date (in days): ");
+    scanf("%d", &DueDate);
+    printf("Enter the Return Date (in days): ");
+    scanf("%d", &ReturnDate);
+
+    DaysOverdue = ReturnDate - DueDate;
+
+    if (DaysOverdue > 0 && DaysOverdue <= 7) {
+        FineRate = 20.0;
+    } else if (DaysOverdue >= 8 && DaysOverdue <= 14) {
+        FineRate = 50.0;
+    } else if (DaysOverdue >= 15) {
+        FineRate = 100.0;
+    } else {
+        FineRate = 0.0; 
+    }
+
+    FineAmount = FineRate * DaysOverdue;
+
+    printf("\nBook ID: %d\n", BookID);
+    printf("Due Date: %d\n", DueDate);
+    printf("Return Date: %d\n", ReturnDate);
+    printf("Fine Rate: Ksh %.2f\n", FineRate);
+    printf("Fine Amount: Ksh %.2f\n", FineAmount);
+
+    return 0;
+}
