@@ -1,0 +1,26 @@
+//Program for loop user input
+/*
+Author: Maina Collins 
+Reg No:CT101/G/21678/24
+Date:10/10/2024
+*/
+#include<stdio.h>
+int main(){
+		int i,start,sum=0,stop;
+		
+		printf("Enter a value for when to start\n");
+		scanf("%d",&start);
+		printf("Your start value is %d\n",start);
+		
+		printf("Enter a value for when to stop\n");
+		scanf("%d",&stop);
+		printf("Your stop value is %d\n",stop);
+		
+	for(i=start;i<=stop;i++)
+	{
+		printf("%d\n",i);
+		sum=sum+i;
+	}
+	printf("The sum is %d",sum);
+return 0;
+}
