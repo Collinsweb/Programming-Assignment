@@ -1,0 +1,27 @@
+//Program for while loop user input
+/*
+Author:Maina Collins
+Reg No:CT101/G/21678/24
+*/
+#include<stdio.h>
+int main(){
+	int i,start,sum=0,stop;
+	
+	printf("Enter a value for when to start\n",start);
+	scanf("%d",&start);
+	printf("Your start value is %d\n",start);
+	
+	printf("Enter a value for when to stop\n",stop);
+	scanf("%d",&stop);
+	printf("Your stop value is %d\n",stop);
+	
+	i=start;
+    while(i<=stop)
+	{
+		printf("%d\n",i);
+		i++ ;
+		sum=sum+i;
+	}
+	printf("The sum is %d",sum);
+return 0;
+}
